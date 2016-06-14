@@ -11,13 +11,13 @@
 ## Installation
 
 * Generate wp starter theme (sassified version) from [UNDERSCORES](http://underscores.me/).
-* Extract the zipped file and copy the folder to your working directory `wp-content -> themes` 
-or upload the zipped file through wp dashboard.
-* On your `themes` directory, clone the repository.
+* On your `wp-content -> themes` directory, clone the repository.
 ```
+$ mkdir NAME-OF-THEME-FOLDER
 $ git clone https://github.com/glennyabellana/wp-automate-workflow.git NAME-OF-THEME-FOLDER
 $ cd NAME-OF-THEME-FOLDER
 ```
+* Extract the zipped file and copy the files to your working directory `wp-content -> themes -> NAME-OF-THEME-FOLDER`
 
 * Open `Gulpfile.js` and replace the necessary values here:
 ```
