@@ -11,7 +11,7 @@
 ## Installation
 
 * Generate wp starter theme (sassified version) from [UNDERSCORES](http://underscores.me/).
-* Extract the zipped file and copy the folder to your working directory `wp-content -> themes`
+* Extract the zipped file and copy the folder to your working directory `wp-content -> themes` or upload the zipped file through wp dashboard.
 * Clone the repository.
 ```
 $ git clone https://github.com/glennyabellana/wp-automate-workflow.git NAME-OF-THEME-FOLDER
