@@ -16,7 +16,7 @@
 $ git clone https://github.com/glennyabellana/wp-automate-workflow.git NAME-OF-THEME-FOLDER
 $ cd NAME-OF-THEME-FOLDER
 ```
-* Extract the zipped file and copy the files to your working directory `wp-content -> themes -> NAME-OF-THEME-FOLDER`
+* Extract the generated theme and copy the files to your working directory `wp-content -> themes -> NAME-OF-THEME-FOLDER`
 
 * Open `Gulpfile.js` and replace the necessary values here:
 ```
