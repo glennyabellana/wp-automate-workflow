@@ -13,7 +13,6 @@
 * Generate wp starter theme (sassified version) from [UNDERSCORES](http://underscores.me/).
 * On your `wp-content -> themes` directory, clone the repository.
 ```
-$ mkdir NAME-OF-THEME-FOLDER
 $ git clone https://github.com/glennyabellana/wp-automate-workflow.git NAME-OF-THEME-FOLDER
 $ cd NAME-OF-THEME-FOLDER
 ```
