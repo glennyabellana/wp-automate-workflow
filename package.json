@@ -1,14 +1,14 @@
 {
-  "name": "wp-workflow-automation",
+  "name": "wp-automate-workflow",
   "version": "1.0.0",
   "description": "Custom gulp task, npm and bower packages for Wordpress automation",
   "main": "Gulpfile.js",
   "scripts": {
     "test": "gulp"
-  },
+  }, 
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/glennyabellana/wp-workflow-automation.git"
+    "url": "git+https://github.com/glennyabellana/wp-automate-workflow.git"
   },
   "keywords": [
     "workflow",
@@ -18,9 +18,9 @@
   "author": "Glenny Abellana",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/glennyabellana/wp-workflow-automation/issues"
+    "url": "https://github.com/glennyabellana/wp-automate-workflow/issues"
   },
-  "homepage": "https://github.com/glennyabellana/wp-workflow-automation#readme",
+  "homepage": "https://github.com/glennyabellana/wp-automate-workflow#readme",
   "devDependencies": {
     "browser-sync": "^2.9.4",
     "del": "^2.2.0",
