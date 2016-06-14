@@ -1,0 +1,24 @@
+{
+  "name": "wp-workflow-automation",
+  "homepage": "https://github.com/glennyabellana/wp-workflow-automation",
+  "authors": [
+    "Glenny Abellana <glenny.abellana@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "latest",
+    "fontawesome": "latest",
+    "html5shiv": "~3.7.3",
+    "modernizr": "~2.8.3",
+    "respond": "~1.4.2"
+  }  
+}
