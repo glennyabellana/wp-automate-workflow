@@ -39,6 +39,7 @@ $ npm install && bower install
 **You are now ready to kick-off your custom theme development!**
 
 
+
 ## Gulp Tasks
 
 **Default task**
@@ -51,6 +52,7 @@ $ gulp
 ```
 
 
+
 **Serve task**
 
 Preview the project on local web server, watch files for changes, reloading the browser automatically via 
@@ -61,6 +63,7 @@ $ gulp serve
 ```
 
 
+
 **Build task**
 
 Build the production-ready files in the `dist` folder. Will have compressed and uncompressed version.
@@ -69,6 +72,7 @@ Run:
 ```
 $ gulp build
 ```
+
 
 
 ## Production
@@ -82,6 +86,8 @@ Run:
 $ gulp deploy
 ```
 
+
+
 **Delete uploaded files in the server**
 
 Upload the build custom theme in the `dist` to FTP Server.
@@ -90,6 +96,7 @@ Run:
 ```
 $ gulp deploy-clean
 ```
+
 
 
 ## License
