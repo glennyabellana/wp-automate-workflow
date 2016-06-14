@@ -88,9 +88,9 @@ $ gulp deploy
 
 
 
+
 **Delete uploaded files in the server**
 
-Upload the build custom theme in the `dist` to FTP Server.
 
 Run:
 ```
