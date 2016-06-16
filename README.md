@@ -62,7 +62,7 @@ $ gulp serve
 
 **Build task**
 
-Build the production-ready files in the `dist` folder. Will have compressed and uncompressed version.
+Build a distributable theme files in the `dist` folder. Will have compressed and uncompressed version.
 
 Run:
 ```bash
