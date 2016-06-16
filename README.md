@@ -75,7 +75,7 @@ $ gulp build
 
 **Upload Production-ready files**
 
-Upload the build custom theme in the `dist` to the FTP Server.
+Upload the build custom theme to the FTP Server.
 
 Run:
 ```bash
