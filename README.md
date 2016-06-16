@@ -10,14 +10,10 @@
 
 ## Installation
 
-* On your `wp-content -> themes` directory, clone the repository.
-```
-$ git clone https://github.com/glennyabellana/wp-automate-workflow.git NAME-OF-THEME-FOLDER
-$ cd NAME-OF-THEME-FOLDER
-```
 * Generate wp starter theme (sassified version) from [UNDERSCORES](http://underscores.me/).
-* Extract and copy the files to your working directory `wp-content -> themes -> NAME-OF-THEME-FOLDER`
-
+* Extract and copy the files to your working directory `wp-content -> themes` or upload the theme directly via wordpress dashboard.
+* Download the [latest release](https://github.com/glennyabellana/wp-automate-workflow/releases)
+* Extract and copy files to your generated theme.
 * Open `Gulpfile.js` and replace the necessary values here:
 ```
 var URL             = 'http://yoursite.com';
@@ -32,7 +28,7 @@ var ftpCredentials = {
 ```
 
 * Run npm and bower to install packages. 
-```
+```bash
 $ npm install && bower install
 ```
 
@@ -58,7 +54,7 @@ $ gulp
 Preview the project on local web server, watch files for changes, reloading the browser automatically via [BrowserSync](https://browsersync.io)
 
 Run:
-```
+```bash
 $ gulp serve
 ```
 
@@ -69,7 +65,7 @@ $ gulp serve
 Build the production-ready files in the `dist` folder. Will have compressed and uncompressed version.
 
 Run:
-```
+```bash
 $ gulp build
 ```
 
@@ -82,7 +78,7 @@ $ gulp build
 Upload the build custom theme in the `dist` to the FTP Server.
 
 Run:
-```
+```bash
 $ gulp deploy
 ```
 
@@ -93,7 +89,7 @@ $ gulp deploy
 
 
 Run:
-```
+```bash
 $ gulp deploy-clean
 ```
 
