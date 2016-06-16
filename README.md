@@ -47,7 +47,7 @@ $ npm install && bower install
 Compile SCSS files, minify styles and scripts. Compiled files are saved in `assets` folder.
 
 Run:
-```
+```bash
 $ gulp
 ```
 
@@ -55,7 +55,7 @@ $ gulp
 
 **Serve task**
 
-Preview the project on local web server, watch files for changes, reloading the browser automatically via 
+Preview the project on local web server, watch files for changes, reloading the browser automatically via [BrowserSync](https://browsersync.io)
 
 Run:
 ```
