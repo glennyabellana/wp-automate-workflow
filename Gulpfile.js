@@ -79,11 +79,6 @@ var conn = ftp.create( {
     log:      gutil.log
 });
 
-var globs = [ 
-    'dist/'+dist_themename+'/**'
-];
-
-
 gulp.task('jsmin', function() { 
   return gulp.src(paths.scripts)
     .pipe(uglify())
@@ -172,11 +167,6 @@ gulp.task('build-zip', ['build-theme'], function() {
 });
 
 
-gulp.task('build-delete', function() {
-  del.sync(['dist/**/*', '!dist/'+dist_themename+'.zip']);
-});
-
-
 gulp.task('build', ['build-clean'], function() {
   gulp.start('build-zip');
 });
@@ -186,11 +176,11 @@ gulp.task('build', ['build-clean'], function() {
 /* Upload to FTP Server */
 
 gulp.task( 'deploy', function() {
-  return gulp.src( globs, { base: 'dist/'+dist_themename, buffer: false } )
-      .pipe( conn.newer( ftpUploadDir+dist_themename ) ) // only upload newer files
-      .pipe( conn.dest( ftpUploadDir+dist_themename ) );
+  return gulp.src( build_files, { base: '.', buffer: false } )
+      .pipe( conn.newer( ftpUploadDir ) ) // only upload newer files
+      .pipe( conn.dest( ftpUploadDir ) );
 });
 
 gulp.task( 'deploy-clean', function ( cb ) {
-    conn.rmdir( ftpUploadDir+dist_themename, cb );
+    conn.rmdir( ftpUploadDir, cb );
 });
