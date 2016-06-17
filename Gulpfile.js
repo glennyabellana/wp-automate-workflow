@@ -24,7 +24,7 @@ var urlUtil       = require('url');
 
 var URL             = 'http://yoursite.com';
 var dist_themename  = 'NAME-OF-THEME-FOLDER';
-var ftpUploadDir    = '/public_html/path-to-upload-theme-folder/';
+var ftpUploadDir    = '/public_html/path-to-upload-theme-folder/'+dist_themename;
 var ftpCredentials = {
     host: 'HOST',
     user: 'USER',
