@@ -1,6 +1,6 @@
 {
   "name": "wp-automate-workflow",
-  "version": "v1.0",
+  "version": "1.0.0",
   "description": "Custom gulp task, npm and bower packages for Wordpress automation",
   "main": "Gulpfile.js",
   "scripts": {
