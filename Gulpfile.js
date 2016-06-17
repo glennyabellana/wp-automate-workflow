@@ -14,7 +14,6 @@ var del           = require('del');
 var zip           = require('gulp-zip');
 var gutil         = require('gulp-util');
 var ftp           = require('vinyl-ftp');
-var runSequence   = require('run-sequence');
 var urlUtil       = require('url');
 
 
@@ -26,9 +25,9 @@ var URL             = 'http://yoursite.com';
 var dist_themename  = 'NAME-OF-THEME-FOLDER';
 var ftpUploadDir    = '/public_html/path-to-upload-theme-folder/'+dist_themename;
 var ftpCredentials = {
-    host: 'HOST',
-    user: 'USER',
-    password: 'PASSWORD'
+    ftphost: 'HOST',
+    ftpuser: 'USER',
+    ftppassword: 'PASSWORD'
 };
 
 /* --End-- */
@@ -45,6 +44,13 @@ var paths = {
     styles: 'sass/**/*.scss',
     php: './**/*.php'
 }; 
+
+var conn = ftp.create( {
+    host:     ftpCredentials.ftphost,
+    user:     ftpCredentials.ftpuser,
+    password: ftpCredentials.ftppassword,
+    log:      gutil.log
+});
 
 var build_files = [
   '**',
@@ -71,13 +77,6 @@ var build_files = [
   '!dist',
   '!dist/**'
 ];
-
-var conn = ftp.create( {
-    host:     ftpCredentials.ftphost,
-    user:     ftpCredentials.ftpuser,
-    password: ftpCredentials.ftppassword,
-    log:      gutil.log
-});
 
 gulp.task('jsmin', function() { 
   return gulp.src(paths.scripts)
