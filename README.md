@@ -12,7 +12,7 @@
 
 * Generate wp starter theme (sassified version) from [UNDERSCORES](http://underscores.me/).
 * Extract and copy the files to your working directory `wp-content -> themes` or upload the theme directly via wordpress dashboard.
-* Download the [latest release](https://github.com/glennyabellana/wp-automate-workflow/releases).
+* Download the [latest release](https://github.com/glennyabellana/wp-automate-workflow/releases/latest).
 * Extract and copy files to your generated theme.
 * Open `Gulpfile.js` and replace the necessary values here:
 ```
