@@ -40,7 +40,7 @@ $ npm install && bower install
 
 **Default task**
 
-Compile SCSS files, minify styles and scripts. Compiled files are saved in `assets` folder.
+Compile SCSS files in `sass` folder, minify styles and scripts. Compiled files are saved in `assets` folder.
 
 Run:
 ```bash
