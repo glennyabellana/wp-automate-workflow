@@ -18,7 +18,7 @@ var urlUtil       = require('url');
 
 
 /**  
- * Replace Variable Values Below 
+ * Replace Variable Values inside the single quote. 
  */
 
 var URL             = 'http://yoursite.com';
