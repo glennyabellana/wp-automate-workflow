@@ -78,6 +78,7 @@ var build_files = [
   '!dist/**'
 ];
 
+
 gulp.task('jsmin', function() { 
   return gulp.src(paths.scripts)
     .pipe(uglify())
