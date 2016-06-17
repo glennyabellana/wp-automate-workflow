@@ -49,6 +49,7 @@ var conn = ftp.create( {
     host:     ftpCredentials.ftphost,
     user:     ftpCredentials.ftpuser,
     password: ftpCredentials.ftppassword,
+    parallel : 10,
     log:      gutil.log
 });
 
@@ -110,11 +111,12 @@ gulp.task('cssmin', ['clean-css', 'styles'], function () {
     .pipe(browserSync.stream());
 });
 
-
+ 
 gulp.task('clean-css', del.bind(null, ['assets/css/*.min.css']));
 
 
 gulp.task('bs-sync', function() {
+
   connect.server({
     port: parseInt(port) + 1,
     hostname: hostname,
@@ -129,16 +131,13 @@ gulp.task('bs-sync', function() {
   });
 });
 
-
-gulp.task('reload-scripts', ['scripts', 'jsmin'], browserSync.reload);
-
+gulp.task('reload-scripts', ['jsmin'], browserSync.reload);
 
 gulp.task('watch', function() {
   gulp.watch(paths.styles, ['cssmin']);
   gulp.watch(paths.scripts, ['reload-scripts']);
   gulp.watch(paths.php).on('change', browserSync.reload);
 });
-
 
 gulp.task('serve', ['bs-sync', 'watch']);
 
@@ -160,14 +159,14 @@ gulp.task('build-theme', function() {
 });
 
 
-gulp.task('build-zip', ['build-theme'], function() {
+gulp.task('build-zip', function() {
   return gulp.src('dist/**/*')
     .pipe(zip(dist_themename+'.zip'))
     .pipe(gulp.dest('dist'));
 });
 
 
-gulp.task('build', ['build-clean'], function() {
+gulp.task('build', ['build-clean', 'build-theme'], function() {
   gulp.start('build-zip');
 });
 
@@ -181,6 +180,7 @@ gulp.task( 'deploy', function() {
       .pipe( conn.dest( ftpUploadDir ) );
 });
 
-gulp.task( 'deploy-clean', function ( cb ) {
+
+gulp.task( 'deploy-clean', function (cb) {
     conn.rmdir( ftpUploadDir, cb );
 });
